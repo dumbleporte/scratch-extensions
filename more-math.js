@@ -1,4 +1,4 @@
-new (function() {
+﻿new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
@@ -37,7 +37,8 @@ new (function() {
 			roundmode: ['to the nearest', 'to this many places:'],
 			parts: ['integer', 'fractional'],
 			iden: ['1', '2']
-		}
+		},
+		url: "https://github.com/savaka2/scratch-extensions/wiki/More-Math-extension"
 	};
 	
 	ext.store = 0;

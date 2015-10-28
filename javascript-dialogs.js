@@ -7,7 +7,8 @@ new (function() {
 			['b', 'confirm answer', 'confirmBool'],
 			['w', 'prompt %s and wait with default text %s', 'promptBlock', 'What\'s your name?', ''],
 			['r', 'prompt answer', 'promptReporter']
-		]
+		],
+		url: "https://github.com/savaka2/scratch-extensions/wiki/JavaScript-Dialogs-extension"
 	};
 	
 	ext.confirmR = false;

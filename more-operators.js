@@ -24,7 +24,8 @@ new (function() {
 			datas: ['a number', 'a boolean', 'empty'],
 			amount: ['no', 'some', 'all'],
 			sets: ['lowercase letters', 'uppercase letters'],
-		}
+		},
+		url: "https://github.com/savaka2/scratch-extensions/wiki/More-Operators-extension"
 	};
 	
 	ext._shutdown = function() {};

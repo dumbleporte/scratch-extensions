@@ -4,7 +4,8 @@ new (function() {
 		blocks: [
 			[' ', 'comment: %s', 'comment'],
 			[' ', 'print %s to web console', 'debug']
-		]
+		],
+		url : "https://github.com/savaka2/scratch-extensions/wiki/Debugging-extension"
 	};
 	
 	ext._shutdown = function() {
