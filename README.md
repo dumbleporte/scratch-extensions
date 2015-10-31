@@ -6,6 +6,7 @@ Table of links:
 
 | Name | Links |
 |---|:---:|
+| [Generic Links] | [Docs](https://github.com/savaka2/scratch-extensions/wiki) [GitHub](https://github.com/savaka2/scratch-extensions) |
 | Debugging | [ScratchX](http://scratchx.org/?url=http://savaka2.github.io/scratch-extensions/debugging.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/Debugging-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/debugging.js) |
 | Hash  | [ScratchX](http://scratchx.org/?url=http://savaka2.github.io/scratch-extensions/hash.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/Hash-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/hash.js) |
 | JavaScript Dialogs | [ScratchX](http://scratchx.org/?url=http://savaka2.github.io/scratch-extensions/javascript-dialogs.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/JavaScript-Dialogs-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/javascript-dialogs.js) |
@@ -14,4 +15,3 @@ Table of links:
 | More Math | [ScratchX](http://scratchx.org/?url=http://savaka2.github.io/scratch-extensions/more-math.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/More-Math-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/more-math.js) |
 | More Operators | [ScratchX](http://scratchx.org/?url=http://savaka2.github.io/scratch-extensions/more-operators.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/More-Operators-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/more-operators.js) |
 | JavaScript | [ScratchX](http://scratchx.org/?url=http://savaka2.github.io/scratch-extensions/javascript.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/JavaScript-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/javascript.js) |
-| [Generic Links] | [Docs](https://github.com/savaka2/scratch-extensions/wiki) [GitHub](https://github.com/savaka2/scratch-extensions) |
