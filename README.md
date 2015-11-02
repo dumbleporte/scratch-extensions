@@ -7,7 +7,7 @@ Table of links:
 | Name | Links |
 |---|:---:|
 | [Generic Links] | [Docs](https://github.com/savaka2/scratch-extensions/wiki) [GitHub](https://github.com/savaka2/scratch-extensions) |
-| Convert to Boolean | [ScratchX](http://scratchx.org/?url=https://raw.githubusercontent.com/savaka2/scratch-extensions/gh-pages/convert-to-boolean.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/Convert-to-Boolean-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/convert-to-boolean.js) |
+| Convert to Boolean | [ScratchX](http://scratchx.org/?url=http://savaka2.github.io/scratch-extensions/convert-to-boolean.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/Convert-to-Boolean-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/convert-to-boolean.js) |
 | Debugging | [ScratchX](http://scratchx.org/?url=http://savaka2.github.io/scratch-extensions/debugging.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/Debugging-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/debugging.js) |
 | Hash  | [ScratchX](http://scratchx.org/?url=http://savaka2.github.io/scratch-extensions/hash.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/Hash-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/hash.js) |
 | JavaScript Dialogs | [ScratchX](http://scratchx.org/?url=http://savaka2.github.io/scratch-extensions/javascript-dialogs.js) [Doc](https://github.com/savaka2/scratch-extensions/wiki/JavaScript-Dialogs-extension) [GitHub](https://github.com/savaka2/scratch-extensions/blob/gh-pages/javascript-dialogs.js) |
