@@ -17,8 +17,14 @@ new (function() {
 	};
 	
 	ext.asboolean = function(s) {
-		if (s = true || s = 'true') {
+		if (s === true) {
 			return true;
+		} else if (typeof s === "string") {
+			if (s.toLowerCase() === "true") {
+				return true
+			} else {
+				return false
+			}
 		} else {
 			return false;
 		}
