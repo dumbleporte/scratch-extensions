@@ -2,8 +2,7 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['b', '%s as boolean', 'asboolean'],
-			['b', 'report %s', 'report']
+			['b', '%s as boolean', 'asboolean']
 		],
 		url : "https://github.com/savaka2/scratch-extensions/wiki/Convert-to-Boolean-extension"
 	};
@@ -28,10 +27,6 @@ new (function() {
 		} else {
 			return false;
 		}
-	};
-	
-	ext.report = function(s) {
-		return s;
 	};
 	
 	ScratchExtensions.register('Convert to Boolean', descriptor, ext);
