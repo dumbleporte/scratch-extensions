@@ -20,9 +20,9 @@ new (function() {
 			return true;
 		} else if (typeof s === "string") {
 			if (s.toLowerCase() === "true") {
-				return true
+				return true;
 			} else {
-				return false
+				return false;
 			}
 		} else {
 			return false;
