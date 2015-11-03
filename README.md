@@ -2,8 +2,6 @@
 
 ## Savaka's extensions for ScratchX
 
-Table of links:
-
 Links:
 * ScratchX – Click to open the extension in ScratchX
 * Doc – Click for instructions for how to use the extension's blocks
