@@ -27,7 +27,8 @@
 			['r', 'sign of %n', 'sign'],
 			['r', 'use quadratic formula to find root %m.iden of y= %n x^2+ %n x+ %n', 'quadform', '1'],
 			['r', 'random number', 'randnum'],
-			['r', 'set %n', 'calculate'],
+			['-'],
+			['r', 'set %s', 'calculate'],
 			['r', 'reset', 'reset'],
 			['r', 'answer', 'ans']
 		],
