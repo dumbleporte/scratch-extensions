@@ -38,13 +38,17 @@ new (function() {
 			return "";
 		} else {
 			var lower = s.toLowerCase();
-			var vowels = []; //LIST
-			var threeletters = []; //LIST
-			var twoletters = []; //LIST
+			var vowels = []; // LIST
+			var threeletters = []; // LIST
+			var twoletters = []; // LIST
 			if (vowels.indexOf(lower.charAt(0)) != -1) {
 				return lower + 'yay';
-			} else if (vowels.indexOf(lower.charAt(0)) != -1) {
-				//CONTINUE
+			} else if (threeletters.indexOf(lower.substring(0,3)) != -1) {
+				return lower.substring(3) + lower.substring(0,3) + 'ay';
+			} else if (twoletters.indexOf(lower.substring(0,2)) != -1) {
+				return lower.substring(2) + lower.substring(0,2) + 'ay';
+			} else {
+				return lower.substring(1) + lower.charAt(0) + 'ay';
 			}
 		}
 	}
