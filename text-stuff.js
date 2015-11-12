@@ -38,7 +38,14 @@ new (function() {
 			return "";
 		} else {
 			var lower = s.toLowerCase();
-			// UNFINISHED
+			var vowels = []; //LIST
+			var threeletters = []; //LIST
+			var twoletters = []; //LIST
+			if (vowels.indexOf(lower.charAt(0)) != -1) {
+				return lower + 'yay';
+			} else if (vowels.indexOf(lower.charAt(0)) != -1) {
+				//CONTINUE
+			}
 		}
 	}
 	ScratchExtensions.register('Text Stuff', descriptor, ext);
