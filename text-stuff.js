@@ -38,9 +38,9 @@ new (function() {
 			return "";
 		} else {
 			var lower = s.toLowerCase();
-			var vowels = ['a', 'e', 'i', 'o', 'u']; // LIST
-			var threeletters = ['sch', 'scr', 'shr', 'sph', 'spl', 'spr', 'squ', 'str', 'thr']; // LIST
-			var twoletters = ['bl', 'br', 'ch', 'cl', 'cr', 'dr', 'fl', 'fr', 'gl', 'gr', 'pl', 'pr', 'sc', 'sh', 'sk', 'sl', 'sm', 'sn', 'sp', 'st', 'sw', 'th', 'tr', 'tw', 'wh', 'wr']; // LIST
+			var vowels = ['a', 'e', 'i', 'o', 'u'];
+			var threeletters = ['sch', 'scr', 'shr', 'sph', 'spl', 'spr', 'squ', 'str', 'thr'];
+			var twoletters = ['bl', 'br', 'ch', 'cl', 'cr', 'dr', 'fl', 'fr', 'gl', 'gr', 'pl', 'pr', 'sc', 'sh', 'sk', 'sl', 'sm', 'sn', 'sp', 'st', 'sw', 'th', 'tr', 'tw', 'wh', 'wr'];
 			if (vowels.indexOf(lower.charAt(0)) != -1) {
 				return lower + 'yay';
 			} else if (threeletters.indexOf(lower.substring(0,3)) != -1) {
