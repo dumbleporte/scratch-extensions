@@ -2,7 +2,8 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['r', '%s reversed', 'reverse']
+			['r', '%s reversed', 'reverse'],
+			['r', '%s in pig latin', 'pig']
 		],
 		url: "https://github.com/savaka2/scratch-extensions/wiki/Text-Stuff-extension"
 	};
@@ -17,6 +18,28 @@ new (function() {
 		for (var i = s.length - 1, o = ''; i >= 0; o += s[i--]) { }
 		return o;
 	} // credit to edd mann
-		
+	
+	ext.alpha = function(s) {
+		var charlist = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+		for (i = 0; i < str.length; i++) {
+			if (charlist.indexOf(str.charAt(i)) === -1) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	ext.pig = function(s) {
+		if (s.length < 1) {
+			return "";
+		} else if (s.length < 3) {
+			return "";
+		} else if (not ext.alpha(s)) {
+			return "";
+		} else {
+			var lower = s.toLowerCase();
+			// UNFINISHED
+		}
+	}
 	ScratchExtensions.register('Text Stuff', descriptor, ext);
 })();
