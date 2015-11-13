@@ -21,8 +21,8 @@ new (function() {
 	
 	ext.alpha = function(s) {
 		var charlist = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-		for (i = 0; i < str.length; i++) {
-			if (charlist.indexOf(str.charAt(i)) === -1) {
+		for (i = 0; i < s.length; i++) {
+			if (charlist.indexOf(s.charAt(i)) === -1) {
 				return false;
 			}
 		}
@@ -31,8 +31,6 @@ new (function() {
 	
 	ext.pig = function(s) {
 		if (s.length < 1) {
-			return "";
-		} else if (s.length < 3) {
 			return "";
 		} else if (! ext.alpha(s)) {
 			return "";
