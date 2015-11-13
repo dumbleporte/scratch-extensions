@@ -34,7 +34,7 @@ new (function() {
 			return "";
 		} else if (s.length < 3) {
 			return "";
-		} else if (not ext.alpha(s)) {
+		} else if (! ext.alpha(s)) {
 			return "";
 		} else {
 			var lower = s.toLowerCase();
