@@ -3,7 +3,8 @@ new (function() {
 	var descriptor = {
 		blocks: [
 			['r', '%s reversed', 'reverse'],
-			['r', '%s in pig latin', 'pig']
+			['r', '%s in pig latin', 'pig'],
+			['r', 'vowels in %s', 'vowels']
 		],
 		url: "https://github.com/savaka2/scratch-extensions/wiki/Text-Stuff-extension"
 	};
@@ -49,6 +50,17 @@ new (function() {
 				return lower.substring(1) + lower.charAt(0) + 'ay';
 			}
 		}
+	}
+	
+	ext.vowels = function(s) {
+		var vowellist = ['a', 'e', 'i', 'o', 'u'];
+		var vowelcount = 0;
+		for (i = 0; i < s.length; i++) {
+			if (vowellist.indexOf(s.charAt(i)) != -1) {
+				vowelcount++
+			}
+		}
+		return vowelcount;
 	}
 	ScratchExtensions.register('Text Stuff', descriptor, ext);
 })();
