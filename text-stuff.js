@@ -3,8 +3,8 @@ new (function() {
 	var descriptor = {
 		blocks: [
 			['r', '%s reversed', 'reverse'],
-			['r', '%s in pig latin', 'pig'],
-			['r', 'vowels in %s', 'vowels']
+			['r', '%s in pig latin', 'pig', 'hello'],
+			['r', 'vowels in %s', 'vowels', 'hello world']
 		],
 		url: "https://github.com/savaka2/scratch-extensions/wiki/Text-Stuff-extension"
 	};
