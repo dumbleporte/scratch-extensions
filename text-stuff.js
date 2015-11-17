@@ -5,10 +5,10 @@ new (function() {
 			['r', '%s reversed', 'reverse'],
 			['r', '%s in pig latin', 'pig', 'hello'],
 			['r', 'vowels in %s', 'vowels', 'hello world'],
-			['r', 'alphanumeric part of %s','alphanumeric', 'hello world'],
+			['r', 'alphanumeric part of %s','alphanumeric', 'taco cat'],
 			['r', '%s is a palindrome?','palindrome', 'yay']
 		],
-		url: "https://github.com/savaka2/scratch-extensions/wiki/Text-Stuff-extension"
+		url: 'https://github.com/savaka2/scratch-extensions/wiki/Text-Stuff-extension'
 	};
 	
 	ext._shutdown = function() {};
@@ -34,9 +34,9 @@ new (function() {
 	
 	ext.pig = function(s) {
 		if (s.length < 1) {
-			return "";
+			return '';
 		} else if (! ext.alpha(s)) {
-			return "";
+			return '';
 		} else {
 			var lower = s.toLowerCase();
 			var vowels = ['a', 'e', 'i', 'o', 'u'];
@@ -70,13 +70,14 @@ new (function() {
 	}
 	
 	ext.alphanumeric = function(s) {
-		an = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+		anchars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+		an = [];
 		for (i = 0; i < s.length; i++) {
-			if (an.indexOf(s.charAt(i)) == -1) {
-				return false;
+			if (anchars.indexOf(s.charAt(i)) != -1) {
+				an.push((s.charAt(i)).toLowerCase());
 			}
 		}
-		return true;
+		return an.join('');
 	}
 	
 	ScratchExtensions.register('Text Stuff', descriptor, ext);
