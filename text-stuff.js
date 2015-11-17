@@ -6,7 +6,7 @@ new (function() {
 			['r', '%s in pig latin', 'pig', 'hello'],
 			['r', 'vowels in %s', 'vowels', 'hello world'],
 			['r', 'alphanumeric part of %s','alphanumeric', 'taco cat'],
-			['r', '%s is a palindrome?','palindrome', 'yay']
+			['b', '%s is a palindrome?','palindrome', 'yay'],
 		],
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Text-Stuff-extension'
 	};
