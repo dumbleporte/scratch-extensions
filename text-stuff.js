@@ -105,8 +105,16 @@ new (function() {
 	}
 	
 	ext.wordcount = function(s) {
-		whitespace = ['	', '', '', ' ', '', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '　'];
-		// continue
+		white = ['	', '', '', ' ', '', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '　'];
+		prev = ' ';
+		wordcounter = 0;
+		for (i = 0; i < s.length; i++) {
+			if ((white.indexOf(s.charAt(i)) == -1) && (white.indexOf(prev) == -1)) {
+				wordcounter++
+			}
+			prev = s.charAt(i)
+		}
+		return wordcounter;
 	}
 	
 	ScratchExtensions.register('Text Stuff', descriptor, ext);
