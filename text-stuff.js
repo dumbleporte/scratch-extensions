@@ -82,7 +82,7 @@ new (function() {
 				if (i == (s.length / 2) - 0.5) {} else if (i >= s.length / 2) {
 					pc2.unshift(s.charAt(i));
 				} else {
-					pc1.push(charAt(i));
+					pc1.push(s.charAt(i));
 				}
 			}
 		}
