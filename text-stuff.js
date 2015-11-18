@@ -110,9 +110,9 @@ new (function() {
 		wordcounter = 0;
 		for (i = 0; i < s.length; i++) {
 			if ((white.indexOf(s.charAt(i)) == -1) && (white.indexOf(prev) == -1)) {
-				wordcounter++
+				wordcounter++;
 			}
-			prev = s.charAt(i)
+			prev = s.charAt(i);
 		}
 		return wordcounter;
 	}
