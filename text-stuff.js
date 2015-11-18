@@ -67,7 +67,30 @@ new (function() {
 	}
 	
 	ext.palindrome = function(s) {
-		
+		pc1 = [];
+		pc2 = [];
+		if (s.length % 2 == 0) {
+			for (i = 0; i < s.length; i++) {
+				if (i >= s.length / 2) {
+					pc2.unshift(s.charAt(i));
+				} else {
+					pc1.push(s.charAt(i));
+				}
+			}
+		} else {
+			for (i = 0; i < s.length; i++) {
+				if (i == (s.length / 2) - 0.5) {} else if (i >= s.length / 2) {
+					pc2.unshift(s.charAt(i));
+				} else {
+					pc1.push(charAt(i));
+				}
+			}
+		}
+		if (pc1.join('') == pc2.join('')) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	ext.alphanumeric = function(s) {
