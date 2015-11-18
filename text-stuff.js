@@ -67,8 +67,8 @@ new (function() {
 	}
 	
 	ext.palindrome = function(s) {
-		pc1 = [];
-		pc2 = [];
+		var pc1 = [];
+		var pc2 = [];
 		if (s.length % 2 == 0) {
 			for (i = 0; i < s.length; i++) {
 				if (i >= s.length / 2) {
@@ -94,8 +94,8 @@ new (function() {
 	}
 	
 	ext.alphanumeric = function(s) {
-		anchars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-		an = [];
+		var anchars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+		var an = [];
 		for (i = 0; i < s.length; i++) {
 			if (anchars.indexOf(s.charAt(i)) != -1) {
 				an.push((s.charAt(i)).toLowerCase());
@@ -105,7 +105,7 @@ new (function() {
 	}
 	
 	ext.wordcount = function(s) {
-		white = ['	', '', '', ' ', '', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '　'];
+		var white = ['	', '', '', ' ', '', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '　'];
 		prev = ' ';
 		wordcounter = 0;
 		for (i = 0; i < s.length; i++) {
