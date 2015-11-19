@@ -56,7 +56,7 @@ new (function() {
 	}
 	
 	ext.vowels = function(s) {
-		var vowellist = ['a', 'e', 'i', 'o', 'u'];
+		var vowellist = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 		var vowelcount = 0;
 		for (i = 0; i < s.length; i++) {
 			if (vowellist.indexOf(s.charAt(i)) != -1) {
