@@ -1,8 +1,10 @@
-﻿# scratch-extensions
+# Savaka's extensions for ScratchX
 
-## Savaka's extensions for ScratchX
+If you find any bugs or have ideas go [add issues](https://github.com/savaka2/scratch-extensions/issues).  
+If you want to contact me about this for some other reasons go to [my Scratch profile](https://scratch.mit.edu/users/savaka/).
 
-Links:
+## Links
+
 * ScratchX – Click to open the extension in ScratchX
 * Doc – Click for instructions for how to use the extension's blocks
 * Demo - Click to open the extension's demonstration sample project in ScratchX
