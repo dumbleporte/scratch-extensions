@@ -3,6 +3,8 @@
 If you find any bugs or have ideas go [add issues](https://github.com/savaka2/scratch-extensions/issues).  
 If you want to contact me about this for some other reasons go to [my Scratch profile](https://scratch.mit.edu/users/savaka/).
 
+Also check out [Ext Open](https://github.com/savaka2/ext-open)
+
 ## Links
 
 * ScratchX – Click to open the extension in ScratchX
