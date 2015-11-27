@@ -1,0 +1,25 @@
+@font-face {
+	font-family: "Segoe UI";
+	src: url(segoe-ui-light.ttf);
+	font-weight: lighter;
+}
+
+body{
+	background-color: black;
+	color: #bbbbbb;
+	font-family: "Segoe UI", sans-serif;
+	font-weight: lighter;
+}
+
+a {
+	color: #30cbff;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
+}
+
+a:active {
+	color: #2499bf;
+}
