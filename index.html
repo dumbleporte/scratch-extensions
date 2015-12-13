@@ -3,9 +3,47 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="../savaka-style.css">
 		<title>Scratch Extensions - Savaka's GitHub Page</title>
+		<script>
+			function showMore() {
+				if (document.getElementById('morepages').style.display == 'initial') {
+					document.getElementById('morepages').style.display = 'none';
+				} else {
+					document.getElementById('morepages').style.display = 'initial';
+				}
+			}
+			function switchSite() {
+				if (document.getElementById('siteswitcher').style.display == 'initial') {
+					document.getElementById('siteswitcher').style.display = 'none';
+					document.getElementById('main').style.display = 'initial';
+				} else {
+					document.getElementById('main').style.display = 'none';
+					document.getElementById('siteswitcher').style.display = 'initial';
+				}
+			}
+		</script>
 	</head>
 	<body>
-		<a href="../index.html"><img src="../images/savakafull-small.PNG"></a>
+		<div id="header">
+		<a href="../index.html"><img src="../images/savakafull-small.PNG" style="display:inline;"></a><span style="display:inline; font-size:2em; font-weight:bold; vertical-align:50%;"> <a href="javascript:switchSite();">&rarr; Home</a></span> <a href="https://github.com/savaka2/something"><img src="../images/gh.png" style="display:inline;"></a>
+		</div>
+		<div id="siteswitcher" style="display:none;">
+		<h1>Switch Site</h1>
+		<p>GitHub projects:</p>
+		<ul>
+			<li><a href="../scratch-extensions/index.html">Scratch Extensions</a></li>
+			<li>Ext Open</li>
+		</ul>
+		<p><a href="javascript:showMore();">Show more</a></p>
+		<div id="morepages" style="display:none">
+			<ul>
+				<li><a href="../sbx-files/index.html">SBX Files</a></li>
+				<li><a href="../something/index.html">Something</a></li>
+			</ul>
+		</div>
+		<p><a href="javascript:switchSite();">Close siteswitcher</a></p>
+		<p><a href="../sitemap.html">Sitemap</a></p>
+		</div>
+		<div id="main">
 		<h1>Savaka’s extensions for ScratchX</h1>
 		<p>If you find any bugs or have ideas go <a href="https://github.com/savaka2/scratch-extensions/issues">add issues</a>.<br>
 		If you want to contact me about this for some other reasons go post on <a href="https://scratch.mit.edu/users/savaka/">my Scratch profile</a>.</p>
@@ -77,5 +115,6 @@
 		</tr>
 		</tbody>
 		</table>
+		</div>
 	</body>
 </html>
