@@ -33,7 +33,7 @@
 			['r', 'answer', 'ans']
 		],
 		menus: {
-			functions: ['csc', 'sec', 'cot', /*'asin', 'acos', 'atan', */'acsc', 'asec', 'acot'],
+			functions: ['csc', 'sec', 'cot', 'acsc', 'asec', 'acot'],
 			roundmode: ['to the nearest', 'to this many places:'],
 			parts: ['integer', 'fractional'],
 			iden: ['1', '2']
