@@ -24,7 +24,7 @@ new (function() {
 		menus: {
 			profilestuff: ['About', 'Country', 'Working on']
 		},
-		url: 'https://github.com/savaka2/scratch-extensions/wiki/Text-Stuff-extension'
+		url: 'https://github.com/savaka2/scratch-extensions/wiki/Scratch-API-extension'
 	};
 	
 	ext._shutdown = function() {};
