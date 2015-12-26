@@ -9,7 +9,7 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['r', '%s of user %s', 'userid']
+			['r', '%m.profilestuff of user %s', 'userid']
 		],
 		menus: {
 			profilestuff: ['About', 'Country', 'Working on']
