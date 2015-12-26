@@ -1,8 +1,19 @@
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js');
-xhr.onload = function() {
-	eval(xhr.response);
+function getJSONP(url, success) {
 
+    var ud = '_' + +new Date,
+        script = document.createElement('script'),
+        head = document.getElementsByTagName('head')[0] 
+               || document.documentElement;
+
+    window[ud] = function(data) {
+        head.removeChild(script);
+        success && success(data);
+    };
+
+    script.src = url.replace('callback=?', 'callback=' + ud);
+    head.appendChild(script);
+
+}
 
 new (function() {
 	// THIS EXTENSION IS NOT FINISHED
@@ -26,7 +37,7 @@ new (function() {
 	ext.userid = function(stuff, user) {
 		var jsonurl = 'https://scratch.mit.edu/api/v1/user/' + user + '/?format=json';
 		var result = '';
-		$.getJSON(jsonurl, function(data) {
+		getJSONP(jsonurl, function(data) {
 			var profile = data.userprofile;
 			switch(stuff) {
 				case 'About':
@@ -44,7 +55,3 @@ new (function() {
 	
 	ScratchExtensions.register('Scratch API', descriptor, ext);
 })();
-
-
-}
-xhr.send();
