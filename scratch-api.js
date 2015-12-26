@@ -40,7 +40,7 @@ new (function() {
 			obj = data;
 		});
 		var profile = obj.userprofile;
-		switch(profile) {
+		switch(stuff) {
 			case 'About':
 				return profile.bio;
 				break;
