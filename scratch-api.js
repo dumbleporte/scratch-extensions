@@ -20,7 +20,7 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['r', '%m.profilestuff of user %s', 'userid']
+			['r', '%m.profilestuff of user %s', 'userid', 'About']
 		],
 		menus: {
 			profilestuff: ['About', 'Country', 'Working on']
@@ -36,21 +36,21 @@ new (function() {
 	
 	ext.userid = function(stuff, user) {
 		var jsonurl = 'https://scratch.mit.edu/api/v1/user/' + user + '/?format=json';
-		var result = '';
+		var obj = '';
 		getJSONP(jsonurl, function(data) {
-			var profile = data.userprofile;
-			switch(stuff) {
-				case 'About':
-					result = profile.bio;
-					break;
-				case 'Country':
-					result = profile.country;
-					break;
-				case 'Working on':
-					result = profile.status;
-			}
+			obj = data;
 		});
-		return result;
+		var profile = obj.userprofile;
+		switch(profile) {
+			case 'About':
+				return profile.bio;
+				break;
+			case 'Country':
+				return profile.country;
+				break;
+			case 'Working on':
+				return profile.status;
+		}
 	}
 	
 	ScratchExtensions.register('Scratch API', descriptor, ext);
