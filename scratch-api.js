@@ -2,7 +2,7 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['r', '%m.profilestuff of user %s', 'userid', 'About']
+			['R', '%m.profilestuff of user %s', 'userid', 'About']
 		],
 		menus: {
 			profilestuff: ['About', 'Country', 'What I\'m working on']
@@ -16,7 +16,7 @@ new (function() {
 		return {status:2, msg:'Ready'};
 	};
 	
-	ext.userid = function(stuff, user) {
+	ext.userid = function(stuff, user, callback) {
 		var r = new XMLHttpRequest();
 		r.addEventListener("load", function() {
 			if (r.responseText) {
