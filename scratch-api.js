@@ -22,7 +22,7 @@ new (function() {
 			['r', '%m.profilestuff of user %s', 'userid', 'About']
 		],
 		menus: {
-			profilestuff: ['About', 'Country', 'Working on']
+			profilestuff: ['About', 'Country', 'What I\'m working on']
 		},
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Scratch-API-extension'
 	};
@@ -47,7 +47,7 @@ new (function() {
 			case 'Country':
 				return profile.country;
 				break;
-			case 'Working on':
+			case 'What I\'m working on':
 				return profile.status;
 		}
 	}
