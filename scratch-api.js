@@ -17,6 +17,7 @@ new (function() {
 	};
 	
 	ext.userid = function(stuff, user, callback) {
+		var jsonurl = 'https://scratch.mit.edu/api/v1/user/' + user + '/?format=json';
 		var r = new XMLHttpRequest();
 		r.addEventListener("load", function() {
 			if (r.responseText) {
