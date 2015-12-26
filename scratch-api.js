@@ -1,20 +1,3 @@
-function getJSONP(url, success) {
-
-    var ud = '_' + +new Date,
-        script = document.createElement('script'),
-        head = document.getElementsByTagName('head')[0] 
-               || document.documentElement;
-
-    window[ud] = function(data) {
-        head.removeChild(script);
-        success && success(data);
-    };
-
-    script.src = url.replace('callback=?', 'callback=' + ud);
-    head.appendChild(script);
-
-}
-
 new (function() {
 	var ext = this;
 	var descriptor = {
@@ -34,23 +17,29 @@ new (function() {
 	};
 	
 	ext.userid = function(stuff, user) {
-		var jsonurl = 'https://scratch.mit.edu/api/v1/user/' + user + '/?format=json';
-		var obj = '';
-		getJSONP(jsonurl, function(data) {
-			obj = data;
+		var r = new XMLHttpRequest();
+		r.addEventListener("load", function() {
+			if (r.responseText) {
+				var obj = JSON.parse(r.responseText);
+				var profile = obj.userprofile;
+				switch(stuff) {
+					case 'About':
+						callback(profile.bio);
+						break;
+					case 'Country':
+						callback(profile.country);
+						break;
+					case 'What I\'m working on':
+						callback(profile.status);
+				}
+			} else {
+				callback("");
+			}
 		});
-		var profile = obj.userprofile;
-		switch(stuff) {
-			case 'About':
-				return profile.bio;
-				break;
-			case 'Country':
-				return profile.country;
-				break;
-			case 'What I\'m working on':
-				return profile.status;
-		}
-	}
+		r.addEventListener("error", function() {callback("")});
+		r.open("get", jsonurl, true);
+		r.send();
+	} // Credit to Zatnik
 	
 	ScratchExtensions.register('Scratch API', descriptor, ext);
 })();
