@@ -16,7 +16,6 @@ function getJSONP(url, success) {
 }
 
 new (function() {
-	// THIS EXTENSION IS NOT FINISHED
 	var ext = this;
 	var descriptor = {
 		blocks: [
