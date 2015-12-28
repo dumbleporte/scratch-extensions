@@ -2,7 +2,7 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['R', '%m.projectstuff of project with id %n', 'projectid', 'Title', '10000000'],
+			['R', '%m.projectstuff of project with id %n', 'projectid', 'Title', 10000000],
 			['R', '%m.profilestuff of user %s', 'userid', 'About']
 		],
 		menus: {
