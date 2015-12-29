@@ -54,11 +54,11 @@ var hexcase=0;function hex_rmd160(a){return rstr2hex(rstr_rmd160(str2rstr_utf8(a
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['r', 'MD5 %s', 'md5hash'],
-			['r', 'SHA-1 %s', 'sha1hash'],
-			['r', 'SHA-256 %s', 'sha256hash'],
-			['r', 'SHA-512 %s', 'sha512hash'],
-			['r', 'RIPEMD-160 %s', 'rmd160hash']
+			['r', 'MD5 %s', 'md5hash', ''],
+			['r', 'SHA-1 %s', 'sha1hash', ''],
+			['r', 'SHA-256 %s', 'sha256hash', ''],
+			['r', 'SHA-512 %s', 'sha512hash', ''],
+			['r', 'RIPEMD-160 %s', 'rmd160hash', '']
 		],
 		url: "https://github.com/savaka2/scratch-extensions/wiki/Hash-extension"
 	};

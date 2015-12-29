@@ -2,9 +2,9 @@
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['b', '%m.bool', 'valueFunction'],
-			['b', '%m.unary when p = %b', 'unaryFunction'],
-			['b', '%m.binary when p = %b and q = %b', 'binaryFunction']
+			['b', '%m.bool', 'valueFunction', 'F'],
+			['b', '%m.unary when p = %b', 'unaryFunction', 'F'],
+			['b', '%m.binary when p = %b and q = %b', 'binaryFunction', 'F']
 		],
 		menus: {
 			bool: ['T', 'F'],

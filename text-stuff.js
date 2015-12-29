@@ -2,7 +2,7 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['r', '%s reversed', 'reverse'],
+			['r', '%s reversed', 'reverse', ''],
 			['r', '%s in pig latin', 'pig', 'hello'],
 			['r', 'vowels in %s', 'vowels', 'hello world'],
 			['r', 'alphanumeric part of %s','alphanumeric', 'taco cat'],

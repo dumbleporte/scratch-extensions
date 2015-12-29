@@ -2,7 +2,7 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['r', 'evaluate JavaScript %s', 'evaluate']
+			['r', 'evaluate JavaScript %s', 'evaluate', '']
 		],
 		url : "https://github.com/savaka2/scratch-extensions/wiki/JavaScript-extension"
 	};
