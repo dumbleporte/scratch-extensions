@@ -25,7 +25,6 @@ new (function() {
 					list.push((cvars[i]).name);
 				}
 				var answer = (cvars[list.indexOf('☁ ' + varname)]).value;
-				console.log(answer);
 				if (Number(answer) != NaN) {
 					return Number(answer);
 				} else {
