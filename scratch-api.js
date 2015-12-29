@@ -3,11 +3,13 @@ new (function() {
 	var descriptor = {
 		blocks: [
 			['R', '%m.projectstuff of project with id %n', 'projectid', 'Title', 10000000],
-			['R', '%m.profilestuff of user %s', 'userid', 'About']
+			['R', '%m.profilestuff of user %s', 'userid', 'About'],
+			['r', '%m.timestuff of ISO 8601 share date %s', 'isodate', 'date', '2012-09-13T07:32:57']
 		],
 		menus: {
 			projectstuff: ['Creator', 'About creator', 'Country of creator', 'What creator is working on', 'Share date', 'Notes and Credits', 'Favorite count', 'Love count', 'URL of thumbnail', 'Title', 'View count'],
-			profilestuff: ['About', 'Country', 'What I\'m working on']
+			profilestuff: ['About', 'Country', 'What I\'m working on'],
+			timestuff: ['year', 'month', 'date', 'hour', 'minute', 'second']
 		},
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Scratch-API-extension'
 	};
@@ -94,6 +96,28 @@ new (function() {
 		r.open("get", jsonurl, true);
 		r.send();
 	} // Credit to Zatnik
+	
+	ext.isodate = function(stuff, datettime) {
+		switch(stuff) {
+			case 'year':
+				return Number(datettime.substring(0,4));
+				break;
+			case 'month':
+				return Number(datettime.substring(5,7));
+				break;
+			case 'date':
+				return Number(datettime.substring(8,10));
+				break;
+			case 'hour':
+				return Number(datettime.substring(11,13));
+				break;
+			case 'minute':
+				return Number(datettime.substring(14,16));
+				break;
+			case 'second':
+				return Number(datettime.substring(17,19));
+		}
+	}
 	
 	ScratchExtensions.register('Scratch API', descriptor, ext);
 })();
