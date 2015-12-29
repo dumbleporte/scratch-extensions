@@ -3,7 +3,7 @@ new (function() {
 	var descriptor = {
 		blocks: [
 			['R', 'cloud variable ☁ %s of project with id %n', 'cvs', '', 10000000]
-		},
+		],
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Cloud-Variable-Server-extension'
 	};
 	
