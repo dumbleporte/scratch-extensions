@@ -4,6 +4,7 @@ new (function() {
 		blocks: [
 			['R', '%m.projectstuff of project with id %n', 'projectid', 'Title', 10000000],
 			['R', '%m.profilestuff of user %s', 'userid', 'About'],
+			['-'],
 			['r', '%m.timestuff of ISO 8601 share date/time %s', 'isodate', 'date', '2012-09-13T07:32:57']
 		],
 		menus: {
