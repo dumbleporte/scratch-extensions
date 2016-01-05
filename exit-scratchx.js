@@ -14,7 +14,11 @@ new (function() {
 	};
 	
 	ext.exit = function() {
-		
+		if (window.location.href == "http://scratchx.org/#home" || window.location.href == "http://scratchx.org/#home/") {
+			window.location = "http://scratchx.org/#";
+		} else {
+			window.location = "http://scratchx.org/#home";
+		}
 	};
 	
 	ScratchExtensions.register('Exit ScratchX', descriptor, ext);
