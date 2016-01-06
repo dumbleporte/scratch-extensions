@@ -14,12 +14,14 @@ new (function() {
 	};
 	
 	ext.exit = function() {
-		if (window.location.href.substring(0,25) == 'http://scratchx.org/#home') {
-			window.location = 'http://scratchx.org/#' + window.location.href.substring(25);
-		} else if (window.location.href.substring(0,21) == 'http://scratchx.org/#') {
-			window.location = 'http://scratchx.org/#home' + window.location.href.substring(21);
+		var url =  window.location.href;
+		var point = url.indexOf('#');
+		var before = url.substring(0, point);
+		var after = url.substring(point);
+		if (after == '#home') {
+			window.location = before + '#';
 		} else {
-			console.log('something didn\'t work')
+			window.location = before + '#home';
 		}
 	};
 	
