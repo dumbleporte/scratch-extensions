@@ -22,7 +22,7 @@ new (function() {
 	};
 	
 	ext.currentstatus = function(stuff, callback) {
-		var jsonurl = 'https://status.github.com/api/status.json';
+		var jsonurl = 'https://crossorigin.me/https://status.github.com/api/status.json';
 		var r = new XMLHttpRequest();
 		r.addEventListener('load', function() {
 			if (r.responseText) {
@@ -44,7 +44,7 @@ new (function() {
 	} // Credit to Zatnik
 	
 	ext.lastmessage = function(stuff, callback) {
-		var jsonurl = 'https://status.github.com/api/last-message.json';
+		var jsonurl = 'https://crossorigin.me/https://status.github.com/api/last-message.json';
 		var r = new XMLHttpRequest();
 		r.addEventListener('load', function() {
 			if (r.responseText) {
