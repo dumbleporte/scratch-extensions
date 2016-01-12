@@ -4,7 +4,7 @@ new (function() {
 		blocks: [
 			['b', '%s as boolean', 'asboolean', 'false']
 		],
-		url : "https://github.com/savaka2/scratch-extensions/wiki/Convert-to-Boolean-extension"
+		url : 'https://github.com/savaka2/scratch-extensions/wiki/Convert-to-Boolean-extension'
 	};
 	
 	ext._shutdown = function() {
@@ -18,8 +18,8 @@ new (function() {
 	ext.asboolean = function(s) {
 		if (s === true) {
 			return true;
-		} else if (typeof s === "string") {
-			if (s.toLowerCase() === "true") {
+		} else if (typeof s === 'string') {
+			if (s.toLowerCase() === 'true') {
 				return true;
 			} else {
 				return false;

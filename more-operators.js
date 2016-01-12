@@ -30,7 +30,7 @@ new (function() {
 			amount: ['no', 'some', 'all'],
 			sets: ['lowercase letters', 'uppercase letters'],
 		},
-		url: "https://github.com/savaka2/scratch-extensions/wiki/More-Operators-extension"
+		url: 'https://github.com/savaka2/scratch-extensions/wiki/More-Operators-extension'
 	};
 	
 	ext._shutdown = function() {};
@@ -118,7 +118,7 @@ new (function() {
 		var str = String.trim(instring.toString());
 		switch(type) {
 			case 'a number':
-				if (str === "") {
+				if (str === '') {
 					return false;
 				} else {
 					return !(isNaN(str));

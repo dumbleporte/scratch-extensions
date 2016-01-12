@@ -24,7 +24,7 @@ new (function() {
 	ext.userid = function(stuff, user, callback) {
 		var jsonurl = 'https://scratch.mit.edu/api/v1/user/' + user + '/?format=json';
 		var r = new XMLHttpRequest();
-		r.addEventListener("load", function() {
+		r.addEventListener('load', function() {
 			if (r.responseText) {
 				var obj = JSON.parse(r.responseText);
 				var profile = obj.userprofile;
@@ -39,18 +39,18 @@ new (function() {
 						callback(profile.status);
 				}
 			} else {
-				callback("");
+				callback('');
 			}
 		});
-		r.addEventListener("error", function() {callback("")});
-		r.open("get", jsonurl, true);
+		r.addEventListener('error', function() {callback('')});
+		r.open('get', jsonurl, true);
 		r.send();
 	} // Credit to Zatnik
 	
 	ext.projectid = function(stuff, project, callback) {
 		var jsonurl = 'https://scratch.mit.edu/api/v1/project/' + project + '/?format=json';
 		var r = new XMLHttpRequest();
-		r.addEventListener("load", function() {
+		r.addEventListener('load', function() {
 			if (r.responseText) {
 				var obj = JSON.parse(r.responseText);
 				var person = obj.creator;
@@ -90,11 +90,11 @@ new (function() {
 						callback(obj.view_count);
 				}
 			} else {
-				callback("");
+				callback('');
 			}
 		});
-		r.addEventListener("error", function() {callback("")});
-		r.open("get", jsonurl, true);
+		r.addEventListener('error', function() {callback('')});
+		r.open('get', jsonurl, true);
 		r.send();
 	} // Credit to Zatnik
 	
