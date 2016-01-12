@@ -1,4 +1,4 @@
-new (function() {
+ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
@@ -14,7 +14,7 @@ new (function() {
 	};
 	
 	ext.cvs = function(varname, project, callback) {
-		var jsonurl = 'https://scratch.mit.edu/varserver/' + project;
+		var jsonurl = 'https://crossorigin.me/https://scratch.mit.edu/varserver/' + project;
 		var r = new XMLHttpRequest();
 		r.addEventListener("load", function() {
 			if (r.responseText) {
