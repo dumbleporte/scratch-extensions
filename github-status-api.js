@@ -9,7 +9,7 @@ new (function() {
 		],
 		menus: {
 			apistatus: ['status', 'status timestamp'],
-			apilastmessage: ['status', 'text', 'timestamp']
+			apilastmessage: ['status', 'text', 'timestamp'],
 			timestuff: ['year', 'month', 'date', 'hour', 'minute', 'second']
 		},
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/GitHub-Status-API-extension'
