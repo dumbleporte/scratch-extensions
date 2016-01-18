@@ -26,9 +26,9 @@
 				}
 				var answer = (cvars[list.indexOf('☁ ' + varname)]).value;
 				if (Number(answer) != NaN) {
-					return Number(answer);
+					callback(Number(answer));
 				} else {
-					return answer;
+					callback(answer);
 				}
 			} else {
 				callback("");
