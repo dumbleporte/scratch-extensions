@@ -7,22 +7,12 @@ new (function() {
 		url : 'https://github.com/savaka2/scratch-extensions/wiki/Cornify-extension'
 	};
 	
-	/*
-	function callback() {
-		cornify_add()
-	}
-	*/
-	var s = document.createElement('script');
-	s.id = 'thing';
-	s.src = 'http://www.cornify.com/js/cornify.js';
-	/*
-	if (s.addEventListener) {
-		s.addEventListener('load', callback, false)
-	} else if (s.readyState) {
-		s.onreadystatechange = callback
-	}
-	*/
-	document.head.appendChild(s);
+	if (document.getElementById('corn') == null) {
+		var s = document.createElement('script');
+		s.id = 'corn';
+		s.src = 'http://www.cornify.com/js/cornify.js';
+		document.head.appendChild(s);
+	};
 	
 	ext._shutdown = function() {
 		
