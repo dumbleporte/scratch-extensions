@@ -15,7 +15,7 @@ new (function() {
 			['r', '%s of row %n of table %s', 'tableGet', ''],
 			['r', 'length of table %s', 'tableGet', '']
 			['-'],
-			['r', 'properties of %m.types %s', 'r', ''],
+			['r', 'properties of %m.types %s', 'r', '']
 		],
 		menus: {
 			'types': ['object', 'table', 'index']
