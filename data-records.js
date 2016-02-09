@@ -2,7 +2,7 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			[' ', 'initialize object %s with parameters %s (space separated)', 'objInit'],
+			[' ', 'initialize object %s with parameters %s (comma separated)', 'objInit'],
 			[' ', 'set %s of object %s to %s', 'objSet'],
 			['r', '%s of object %s', 'objGet', '']
 		],
@@ -29,7 +29,7 @@ new (function() {
 		}
 		var creating = {};
 		creating.nameText = name;
-		var splitKeys = keys.split(' ');
+		var splitKeys = keys.split(',');
 		var creatingData = {};
 		for (i = 0; i < splitKeys.length; i++) {
 			creatingData[splitKeys[i]] = '';
