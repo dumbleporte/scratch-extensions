@@ -69,7 +69,7 @@ new (function() {
 			}
 		}
 		if (pos != -1 && objects[pos].data[field] != undefined) {
-			objects[pos].data[field] = value; //idk
+			objects[pos].data[field] = value;
 		}
 	};
 	
