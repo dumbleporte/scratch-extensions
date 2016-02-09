@@ -8,7 +8,7 @@ new (function() {
 			['-'],
 			[' ', 'initialize table %s with columns %s (comma separated)', 'tableInit'],
 			[' ', 'add row with data %s (comma separated) to table %s', 'tableAdd'],
-			[' ', 'delete row %n of table %s', 'tableDel'],
+			[' ', 'delete row %n of table %s', 'tableDel'], //is next
 			[' ', 'delete all rows of table %s', 'tableClear'],
 			[' ', 'insert row at position %n with data %s (comma separated) of table %s', 'tableIns'],
 			[' ', 'set %s of row %n of table %s to %s', 'tableSet'],
@@ -85,6 +85,53 @@ new (function() {
 			return objects[pos].data[field];
 		} else {
 			return '';
+		}
+	};
+	
+	ext.tableInit = function(name, columns) {
+		if (name.length > 0) {
+			var pos = -1;
+			for (i = 0; i < tables.length; i++) {
+				if (tables[i].nameText == name) {
+					pos = i;
+					break;
+				}
+			}
+			var creating = {};
+			creating.nameText = name;
+			var splitCols = columns.split(',');
+			var creatingCols = [];
+			for (i = 0; i < splitCols.length; i++) {
+				creatingCols.push(splitCols[i]);
+			}
+			creating.cols = creatingCols;
+			creating.data = [];
+			if (pos != -1) {
+				tables[pos] = creating;
+			} else {
+				tables.push(creating);
+			}
+		}
+	};
+	
+	ext.tableAdd = function(values, name) {
+		var pos = -1;
+		for (i = 0; i < tables.length; i++) {
+			if (tables[i].nameText == name) {
+				pos = i;
+				break;
+			}
+		}
+		var entries = values.split(',');
+		if (pos != -1 && entries.length <= tables[pos].cols.length) {
+			var creating = {};
+			for (i = 0; i < entries.length; i++) {
+				creating[tables[pos].cols[i]] = entries[i];
+			}
+			for (i = (tables[pos].cols.length - entries.length); i > 0; i--) {
+				creating[tables[pos].cols[(tables[pos].cols.length - i)]] = '';
+			}
+			tables[pos].data.push(creating);
 		}
 	};
 	
