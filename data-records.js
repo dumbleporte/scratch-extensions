@@ -36,25 +36,27 @@ new (function() {
 	};
 	
 	ext.objInit = function(name, fields) {
-		var pos = -1;
-		for (i = 0; i < objects.length; i++) {
-			if (objects[i].nameText == name) {
-				pos = i;
-				break;
+		if (name.length > 0) {
+			var pos = -1;
+			for (i = 0; i < objects.length; i++) {
+				if (objects[i].nameText == name) {
+					pos = i;
+					break;
+				}
 			}
-		}
-		var creating = {};
-		creating.nameText = name;
-		var splitFields = fields.split(',');
-		var creatingData = {};
-		for (i = 0; i < splitFields.length; i++) {
-			creatingData[splitFields[i]] = '';
-		}
-		creating.data = creatingData;
-		if (pos != -1) {
-			objects[pos] = creating;
-		} else {
-			objects.push(creating);
+			var creating = {};
+			creating.nameText = name;
+			var splitFields = fields.split(',');
+			var creatingData = {};
+			for (i = 0; i < splitFields.length; i++) {
+				creatingData[splitFields[i]] = '';
+			}
+			creating.data = creatingData;
+			if (pos != -1) {
+				objects[pos] = creating;
+			} else {
+				objects.push(creating);
+			}
 		}
 	};
 	
