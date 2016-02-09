@@ -56,7 +56,18 @@ new (function() {
 	};
 	
 	ext.objGet = function(key, name) {
-		//code
+		var pos = -1;
+		for (i = 0; i < objects.length; i++) {
+			if (objects[i].nameText == name) {
+				pos = i;
+				break;
+			}
+		}
+		if (pos != -1 && objects[pos].data[key] != undefined) {
+			return objects[pos].data[key];
+		} else {
+			return '';
+		}
 	};
 	
 	ScratchExtensions.register('Data Records', descriptor, ext);
