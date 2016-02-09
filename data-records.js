@@ -13,13 +13,13 @@ new (function() {
 			[' ', 'insert row at position %n with data %s (comma separated) of table %s', 'tableIns'],
 			[' ', 'set %s of row %n of table %s to %s', 'tableSet'],
 			['r', '%s of row %n of table %s', 'tableGet', ''],
-			['r', 'length of table %s', 'tableGet', '']
+			['r', 'length of table %s', 'tableGet', ''],
 			['-'],
 			['r', 'properties of %m.types %s', 'r', '']
 		],
 		menus: {
 			'types': ['object', 'table', 'index']
-		}
+		},
 		url : 'https://github.com/savaka2/scratch-extensions/wiki/Data-Records-extension'
 	};
 	
