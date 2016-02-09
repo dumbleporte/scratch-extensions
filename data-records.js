@@ -4,7 +4,7 @@ new (function() {
 		blocks: [
 			[' ', 'initialize object %s with parameters %s (space separated)', 'objInit'],
 			[' ', 'set %s of object %s to %s', 'objSet'],
-			['r', '%s of object %s', 'objGet', ''],
+			['r', '%s of object %s', 'objGet', '']
 		],
 		url : 'https://github.com/savaka2/scratch-extensions/wiki/Data-Records-extension'
 	};
