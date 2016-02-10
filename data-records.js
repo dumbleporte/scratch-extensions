@@ -135,5 +135,18 @@ new (function() {
 		}
 	};
 	
+	ext.tableDel = function(row, name) {
+		var pos = -1;
+		for (i = 0; i < tables.length; i++) {
+			if (tables[i].nameText == name) {
+				pos = i;
+				break;
+			}
+		}
+		if (pos != -1 && row > 0 && row <= tables[pos].data.length) {
+			tables[pos].data.splice((row - 1), 1);
+		}
+	};
+	
 	ScratchExtensions.register('Data Records', descriptor, ext);
 })();
