@@ -8,8 +8,8 @@ new (function() {
 			['-'],
 			[' ', 'initialize table %s with columns %s (comma separated)', 'tableInit'],
 			[' ', 'add row with data %s (comma separated) to table %s', 'tableAdd'],
-			[' ', 'delete row %n of table %s', 'tableDel'], //is next
-			[' ', 'delete all rows of table %s', 'tableClear'],
+			[' ', 'delete row %n of table %s', 'tableDel'],
+			[' ', 'delete all rows of table %s', 'tableClear'], //next
 			[' ', 'insert row at position %n with data %s (comma separated) of table %s', 'tableIns'],
 			[' ', 'set %s of row %n of table %s to %s', 'tableSet'],
 			['r', '%s of row %n of table %s', 'tableGet', ''],
