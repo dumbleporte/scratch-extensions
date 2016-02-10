@@ -9,9 +9,9 @@ new (function() {
 			[' ', 'initialize table %s with columns %s (comma separated)', 'tableInit'],
 			[' ', 'add row with data %s (comma separated) to table %s', 'tableAdd'],
 			[' ', 'delete row %n of table %s', 'tableDel'],
-			[' ', 'delete all rows of table %s', 'tableClear'], //next
+			[' ', 'delete all rows of table %s', 'tableClear'],
 			[' ', 'insert row at position %n with data %s (comma separated) of table %s', 'tableIns'],
-			[' ', 'set %s of row %n of table %s to %s', 'tableSet'],
+			[' ', 'set %s of row %n of table %s to %s', 'tableSet'], //next
 			['r', '%s of row %n of table %s', 'tableGet', ''],
 			['r', 'length of table %s', 'tableGet', ''],
 			['-'],
@@ -143,8 +143,42 @@ new (function() {
 				break;
 			}
 		}
-		if (pos != -1 && row > 0 && row <= tables[pos].data.length) {
+		if (pos != -1 && row > 0 && row <= tables[pos].data.length && Math.round(row) == row) {
 			tables[pos].data.splice((row - 1), 1);
+		}
+	};
+	
+	ext.tableClear = function(name) {
+		var pos = -1;
+		for (i = 0; i < tables.length; i++) {
+			if (tables[i].nameText == name) {
+				pos = i;
+				break;
+			}
+		}
+		if (pos != -1) {
+			tables[pos].data = [];
+		}
+	};
+	
+	ext.tableIns = function(row, values, name) {
+		var pos = -1;
+		for (i = 0; i < tables.length; i++) {
+			if (tables[i].nameText == name) {
+				pos = i;
+				break;
+			}
+		}
+		var entries = values.split(',');
+		if (pos != -1 && entries.length <= tables[pos].cols.length && row > 0 && row <= (tables[pos].data.length + 1) && Math.round(row) == row) {
+			var creating = {};
+			for (i = 0; i < entries.length; i++) {
+				creating[tables[pos].cols[i]] = entries[i];
+			}
+			for (i = (tables[pos].cols.length - entries.length); i > 0; i--) {
+				creating[tables[pos].cols[(tables[pos].cols.length - i)]] = '';
+			}
+			tables[pos].data.splice((index - 1), 0, creating);
 		}
 	};
 	
