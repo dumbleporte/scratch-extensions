@@ -11,11 +11,11 @@ new (function() {
 			[' ', 'delete row %n of table %s', 'tableDel'],
 			[' ', 'delete all rows of table %s', 'tableClear'],
 			[' ', 'insert row at position %n with data %s (comma separated) of table %s', 'tableIns'],
-			[' ', 'set %s of row %n of table %s to %s', 'tableSet'], //next
+			[' ', 'set %s of row %n of table %s to %s', 'tableSet'],
 			['r', '%s of row %n of table %s', 'tableGet', ''],
 			['r', 'length of table %s', 'tableLength', ''],
 			['-'],
-			['r', 'properties of %m.types %s', 'r', '']
+			['r', 'properties of %m.types %s (space separated)', 'rcl', '']
 		],
 		menus: {
 			'types': ['object', 'table', 'index']
@@ -181,6 +181,69 @@ new (function() {
 			tables[pos].data.splice((index - 1), 0, creating);
 		}
 	};
+	
+	ext.tableSet = function(column, row, name, value) {
+		var pos = -1;
+		for (i = 0; i < tables.length; i++) {
+			if (tables[i].nameText == name) {
+				pos = i;
+				break;
+			}
+		}
+		if (pos != -1 && row > 0 && tables[pos].data[row][column] != undefined && Math.round(row) == row) {
+			tables[pos].data[row][column] = value;
+		}
+	};
+	
+	ext.tableGet = function(column, row, name) {
+		var pos = -1;
+		for (i = 0; i < tables.length; i++) {
+			if (tables[i].nameText == name) {
+				pos = i;
+				break;
+			}
+		}
+		if (pos != -1 && row > 0 && tables[pos].data[row][column] != undefined && Math.round(row) == row) {
+			return tables[pos].data[row][column];
+		} else {
+			return '';
+		}
+	};
+	
+	ext.tableLength = function(name) {
+		var pos = -1;
+		for (i = 0; i < tables.length; i++) {
+			if (tables[i].nameText == name) {
+				pos = i;
+				break;
+			}
+		}
+		if (pos != -1) {
+			return tables[pos].data.length;
+		} else {
+			return -1;
+		}
+	};
+	
+	/*
+	ext.rcl = function(type, name) {
+		if (type = 'object') {
+			
+		}
+		var pos = -1;
+		for (i = 0; i < tables.length; i++) {
+			if (tables[i].nameText == name) {
+				pos = i;
+				break;
+			}
+		}
+		if (pos != -1) {
+			return tables[pos].data.length;
+		} else {
+			return -1;
+		}
+	};
+	*/
 	
 	ScratchExtensions.register('Data Records', descriptor, ext);
 })();
