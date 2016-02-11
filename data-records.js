@@ -13,9 +13,7 @@ new (function() {
 			[' ', 'insert row at position %n with data %s (comma separated) of table %s', 'tableIns'],
 			[' ', 'set %s of row %n of table %s to %s', 'tableSet'],
 			['r', '%s of row %n of table %s', 'tableGet', ''],
-			['r', 'length of table %s', 'tableLength', ''],
-			['-'],
-			['r', 'properties of %m.types %s (space separated)', 'rcl', '']
+			['r', 'length of table %s', 'tableLength', '']
 		],
 		menus: {
 			'types': ['object', 'table', 'index']
@@ -224,26 +222,6 @@ new (function() {
 			return -1;
 		}
 	};
-	
-	/*
-	ext.rcl = function(type, name) {
-		if (type = 'object') {
-			
-		}
-		var pos = -1;
-		for (i = 0; i < tables.length; i++) {
-			if (tables[i].nameText == name) {
-				pos = i;
-				break;
-			}
-		}
-		if (pos != -1) {
-			return tables[pos].data.length;
-		} else {
-			return -1;
-		}
-	};
-	*/
 	
 	ScratchExtensions.register('Data Records', descriptor, ext);
 })();
