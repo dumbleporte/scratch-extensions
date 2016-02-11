@@ -13,7 +13,7 @@ new (function() {
 			[' ', 'insert row at position %n with data %s (comma separated) of table %s', 'tableIns'],
 			[' ', 'set %s of row %n of table %s to %s', 'tableSet'], //next
 			['r', '%s of row %n of table %s', 'tableGet', ''],
-			['r', 'length of table %s', 'tableGet', ''],
+			['r', 'length of table %s', 'tableLength', ''],
 			['-'],
 			['r', 'properties of %m.types %s', 'r', '']
 		],
