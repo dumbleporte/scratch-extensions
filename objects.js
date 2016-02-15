@@ -7,7 +7,9 @@ new (function() {
 			[' ', 'delete property %s of object %s', 'delete'],
 			['r', '%s of object %s', 'get', ''],
 			['-'],
-			[' ', 'clear all object data', 'clear']
+			[' ', 'clear all object data', 'clear'],
+			['-'],
+			['r', 'debug', 'debug']
 		],
 		url : 'https://github.com/savaka2/scratch-extensions/wiki/Objects-extension'
 	};
@@ -55,6 +57,10 @@ new (function() {
 	ext.clear = function() {
 		objobj = {};
 	};
+	
+	ext.debug {
+		return JSON.stringify(objobj);
+	}
 	
 	ScratchExtensions.register('Objects', descriptor, ext);
 })();
