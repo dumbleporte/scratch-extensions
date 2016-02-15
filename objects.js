@@ -2,12 +2,11 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
+			[' ', 'initialize extension', 'clear'],
 			[' ', 'initialize object %s', 'init'],
 			[' ', 'set %s of object %s to %s', 'set'],
 			[' ', 'delete property %s of object %s', 'del'],
-			['r', '%s of object %s', 'get', ''],
-			['-'],
-			[' ', 'clear all object data', 'clear']
+			['r', '%s of object %s', 'get', '']
 		],
 		url : 'https://github.com/savaka2/scratch-extensions/wiki/Objects-extension'
 	};
