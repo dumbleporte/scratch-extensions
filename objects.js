@@ -58,7 +58,7 @@ new (function() {
 		objobj = {};
 	};
 	
-	ext.debug {
+	ext.debug = function() {
 		return JSON.stringify(objobj);
 	}
 	
