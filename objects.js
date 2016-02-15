@@ -17,7 +17,7 @@ new (function() {
 	ext.objobj = {};
 	
 	ext._shutdown = function() {
-		objobj = {};
+		ext.objobj = {};
 	};
 	
 	ext._getStatus = function() {
@@ -25,27 +25,27 @@ new (function() {
 	};
 	
 	ext.init = function(name) {
-		objobj[name] = {};
+		ext.objobj[name] = {};
 	};
 	
 	ext.set = function(key, name, value) {
-		if (objobj[name] !== undefined) {
-			objobj[name][key] = value;
+		if (ext.objobj[name] !== undefined) {
+			ext.objobj[name][key] = value;
 		}
 	};
 	
 	ext.del = function(key, name, value) {
-		if (objobj[name] !== undefined) {
-			if (objobj[name][key] !== undefined) {
-				delete objobj[name][key];
+		if (ext.objobj[name] !== undefined) {
+			if (ext.objobj[name][key] !== undefined) {
+				delete ext.objobj[name][key];
 			}
 		}
 	};
 	
 	ext.get = function(key, name, value) {
-		if (objobj[name] !== undefined) {
-			if (objobj[name][key] !== undefined) {
-				return objobj[name][key];
+		if (ext.objobj[name] !== undefined) {
+			if (ext.objobj[name][key] !== undefined) {
+				return ext.objobj[name][key];
 			} else {
 				return '';
 			}
@@ -55,11 +55,11 @@ new (function() {
 	};
 	
 	ext.clear = function() {
-		objobj = {};
+		ext.objobj = {};
 	};
 	
 	ext.debug = function() {
-		return JSON.stringify(objobj);
+		return JSON.stringify(ext.objobj);
 	};
 	
 	ScratchExtensions.register('Objects', descriptor, ext);
