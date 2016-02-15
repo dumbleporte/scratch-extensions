@@ -4,7 +4,7 @@ new (function() {
 		blocks: [
 			[' ', 'initialize object %s', 'init'],
 			[' ', 'set %s of object %s to %s', 'set'],
-			[' ', 'delete property %s of object %s', 'delete'],
+			[' ', 'delete property %s of object %s', 'del'],
 			['r', '%s of object %s', 'get', ''],
 			['-'],
 			[' ', 'clear all object data', 'clear'],
@@ -29,22 +29,22 @@ new (function() {
 	};
 	
 	ext.set = function(key, name, value) {
-		if (objobj[name] != undefined) {
+		if (objobj[name] !== undefined) {
 			objobj[name][key] = value;
 		}
 	};
 	
-	ext.delete = function(key, name, value) {
-		if (objobj[name] != undefined) {
-			if (objobj[name][key] != undefined) {
+	ext.del = function(key, name, value) {
+		if (objobj[name] !== undefined) {
+			if (objobj[name][key] !== undefined) {
 				delete objobj[name][key];
 			}
 		}
 	};
 	
 	ext.get = function(key, name, value) {
-		if (objobj[name] != undefined) {
-			if (objobj[name][key] != undefined) {
+		if (objobj[name] !== undefined) {
+			if (objobj[name][key] !== undefined) {
 				return objobj[name][key];
 			} else {
 				return '';
@@ -60,7 +60,7 @@ new (function() {
 	
 	ext.debug = function() {
 		return JSON.stringify(objobj);
-	}
+	};
 	
 	ScratchExtensions.register('Objects', descriptor, ext);
 })();
