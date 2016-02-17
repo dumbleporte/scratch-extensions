@@ -22,7 +22,7 @@ new (function() {
 	};
 	
 	ext.currentstatus = function(stuff, callback) {
-		var jsonurl = 'https://crossorigin.me/https://status.github.com/api/status.json';
+		var jsonurl = 'https://crossorigin.me/https://status.github.com/api/status.json&randomstuff=' + Math.floor(Math.random() * 10000);
 		var r = new XMLHttpRequest();
 		r.addEventListener('load', function() {
 			if (r.responseText) {
