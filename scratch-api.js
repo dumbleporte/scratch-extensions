@@ -22,7 +22,7 @@ new (function() {
 	};
 	
 	ext.userid = function(stuff, user, callback) {
-		var jsonurl = 'https://scratch.mit.edu/api/v1/user/' + user + '/?format=json&randomstuff=' + Math.floor(Math.random() * 10000);
+		var jsonurl = 'https://scratch.mit.edu/api/v1/user/' + user + '/?format=json&randomstuff=' + Math.floor(Math.random() * 10000) + '&paranoia=' + Number(new Date()).toString();
 		var r = new XMLHttpRequest();
 		r.addEventListener('load', function() {
 			if (r.responseText) {
@@ -48,7 +48,7 @@ new (function() {
 	} // Credit to Zatnik
 	
 	ext.projectid = function(stuff, project, callback) {
-		var jsonurl = 'https://scratch.mit.edu/api/v1/project/' + project + '/?format=json';
+		var jsonurl = 'https://scratch.mit.edu/api/v1/project/' + project + '/?format=json&randomstuff=' + Math.floor(Math.random() * 10000) + '&paranoia=' + Number(new Date()).toString();
 		var r = new XMLHttpRequest();
 		r.addEventListener('load', function() {
 			if (r.responseText) {
