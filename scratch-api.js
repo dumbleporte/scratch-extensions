@@ -2,10 +2,10 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			['R', '%m.projectstuff of project with id %n', 'projectid', 'Title', 10000000]
+			['R', '%m.users of user %s', 'userUsername', 'id', 'mres']
 		],
 		menus: {
-			projectstuff: ['Creator', 'About creator', 'Country of creator', 'What creator is working on', 'Share date', 'Notes and Credits', 'Favorite count', 'Love count', 'URL of thumbnail', 'Title', 'View count']
+			users: ['', '']
 		},
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Scratch-API-extension'
 	};
