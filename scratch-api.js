@@ -5,7 +5,7 @@ new (function() {
 			['R', '%m.users of user %s', 'userUsername', 'id', 'mres']
 		],
 		menus: {
-			users: ['', '']
+			users: ['id', 'join time', 'country', 'about me', 'what I\'m working on']
 		},
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Scratch-API-extension'
 	};
@@ -22,16 +22,21 @@ new (function() {
 		r.addEventListener('load', function() {
 			if (r.responseText) {
 				var obj = JSON.parse(r.responseText);
-				var profile = obj.userprofile;
 				switch(stuff) {
-					case 'About':
-						callback(profile.bio);
+					case 'id':
+						callback(obj.id);
 						break;
-					case 'Country':
-						callback(profile.country);
+					case 'join time':
+						callback(obj.history.joined);
 						break;
-					case 'What I\'m working on':
-						callback(profile.status);
+					case 'country':
+						callback(obj.profile.country);
+						break;
+					case 'about me':
+						callback(obj.profile.bio);
+						break;
+					case 'what I\'m working on':
+						callback(obj.profile.status);
 				}
 			} else {
 				callback('');
