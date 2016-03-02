@@ -2,12 +2,12 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [/* not made yet
-			['R', '%n most recent following of user %s', 'userUsernameFollowing1', 'mres'],
+			['R', '%m.users of %n most recent following of user %s', 'userUsernameFollowing1', 'username', 1, 'mres'],
 			['R', 'following count of user %s', 'userUsernameFollowing2', 'mres'],
-			['B', 'user %s is following %s?', 'userUsernameFollowing3', 'mres'],
-			['R', '%n most recent follower of user %s', 'userUsernameFollowers1', 'mres'],
+			['B', 'user %s is following %s?', 'userUsernameFollowing3', 'mres', 'andresmh'],
+			['R', '%m.users of %n most recent follower of user %s', 'userUsernameFollowers1', 'username', 1, 'mres'],
 			['R', 'follower count of user %s', 'userUsernameFollowers2', 'mres'],
-			['B', 'user %s has follower %s?', 'userUsernameFollowers3', 'mres'],
+			['B', 'user %s has follower %s?', 'userUsernameFollowers3', 'mres', 'andresmh'],
 			['-'],*/
 			['R', 'message count of user %s', 'userUsernameMessagesCount', 'mres'],
 			['-'],
@@ -17,7 +17,7 @@ new (function() {
 			['R', '%m.users of user %s', 'userUsername', 'id', 'mres']
 		],
 		menus: {
-			users: ['id', 'join time', 'country', 'about me', 'what I\'m working on'],
+			users: ['id', 'join time', 'country', 'about me', 'what I\'m working on', 'username'],
 			news: ['post id', 'time', 'title', 'link', 'text']
 		},
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Scratch-API-extension'
@@ -118,6 +118,7 @@ new (function() {
 						break;
 					case 'what I\'m working on':
 						callback(obj.profile.status);
+						
 				}
 			} else {
 				callback('');
