@@ -17,7 +17,7 @@ new (function() {
 			['R', '%m.users of user %s', 'userUsername', 'id', 'mres']
 		],
 		menus: {
-			users: ['id', 'join time', 'country', 'about me', 'what I\'m working on', 'username'],
+			users: ['id', 'username', 'join time', 'country', 'about me', 'what I\'m working on'],
 			news: ['post id', 'time', 'title', 'link', 'text']
 		},
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Scratch-API-extension'
@@ -107,6 +107,9 @@ new (function() {
 					case 'id':
 						callback(obj.id);
 						break;
+					case 'username':
+						callback(obj.username);
+						break;
 					case 'join time':
 						callback(obj.history.joined);
 						break;
@@ -118,7 +121,6 @@ new (function() {
 						break;
 					case 'what I\'m working on':
 						callback(obj.profile.status);
-						
 				}
 			} else {
 				callback('');
