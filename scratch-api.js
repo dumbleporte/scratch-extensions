@@ -1,20 +1,25 @@
 new (function() {
 	var ext = this;
 	var descriptor = {
-		blocks: [/* not made yet
-			['R', '%m.users of %n most recent following of user %s', 'userUsernameFollowing1', 'username', 1, 'mres'],
-			['R', 'following count of user %s', 'userUsernameFollowing2', 'mres'],
-			['B', 'user %s is following %s?', 'userUsernameFollowing3', 'mres', 'andresmh'],
-			['R', '%m.users of %n most recent follower of user %s', 'userUsernameFollowers1', 'username', 1, 'mres'],
-			['R', 'follower count of user %s', 'userUsernameFollowers2', 'mres'],
-			['B', 'user %s has follower %s?', 'userUsernameFollowers3', 'mres', 'andresmh'],
+		blocks: [
+			/*['R', '%m.users of %n most recent following of user %s', 'usersUsernameFollowing', 'username', 1, 'mres'],
+			['R', 'following count of user %s', 'usersUsernameFollowing_length', 'mres'],
+			['R', '%m.users of %n most recent follower of user %s', 'usersUsernameFollowers', 'username', 1, 'mres'],
+			['R', 'follower count of user %s', 'usersUsernameFollowers_length', 'mres'],
 			['-'],*/
-			['R', 'message count of user %s', 'userUsernameMessagesCount', 'mres'],
+			['R', 'message count of user %s', 'usersUsernameMessagesCount', 'mres'],
 			['-'],
-			['R', '%s of news item %n', 'news1', 'title', 1],
-			['R', 'length of news', 'news2', ''],
+			['R', '%s of news item %n', 'news', 'title', 1],
+			['R', 'length of news', 'news_length', ''],
 			['-'],
-			['R', '%m.users of user %s', 'userUsername', 'id', 'mres']
+			['R', '%m.projects of %n shared project of user %s', 'usersUsernameProjects', 'title', 1, 'mres'],//make
+			['R', 'project count of user %s', 'usersUsernameProjects_length', 'mres'],//make
+			['R', '%m.projects of project with id %n by user %s', 'usersUsernameProjectsProject', 'title', 10128125, 'mres'],//make
+			/*['R', '%m.projects of %n favorited project by user %s', 'usersUsernameFavorites', 'title', 1, 'mres'],
+			['R', 'favorite count of user %s', 'usersUsernameFavorites_length', 'mres'],*/
+			['R', 'total project count', 'projectsCountAll', 'mres'],//make
+			['-'],
+			['R', '%m.users of user %s', 'usersUsername', 'id', 'mres']
 		],
 		menus: {
 			users: ['id', 'username', 'join time', 'country', 'about me', 'what I\'m working on'],
@@ -29,7 +34,7 @@ new (function() {
 		return {status:2, msg:'Ready'};
 	};
 	
-	ext.userUsernameMessagesCount = function(user, callback) {
+	ext.usersUsernameMessagesCount = function(user, callback) {
 		var jsonurl = 'https://api.scratch.mit.edu/users/' + user + '/messages/count?randomstuff=' + Math.floor(Math.random() * 10000) + '&paranoia=' + Number(new Date()).toString();
 		var r = new XMLHttpRequest();
 		r.addEventListener('load', function() {
@@ -97,7 +102,7 @@ new (function() {
 		r.send();
 	}
 	
-	ext.userUsername = function(stuff, user, callback) {
+	ext.usersUsername = function(stuff, user, callback) {
 		var jsonurl = 'https://api.scratch.mit.edu/users/' + user + '?randomstuff=' + Math.floor(Math.random() * 10000) + '&paranoia=' + Number(new Date()).toString();
 		var r = new XMLHttpRequest();
 		r.addEventListener('load', function() {
