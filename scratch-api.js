@@ -2,9 +2,9 @@ new (function() {
 	var ext = this;
 	var descriptor = {
 		blocks: [
-			/*['R', '%m.users of %n most recent following of user %s', 'usersUsernameFollowing', 'username', 1, 'mres'],
+			/*['R', '%m.users of following %n of user %s', 'usersUsernameFollowing', 'username', 1, 'mres'],
 			['R', 'following count of user %s', 'usersUsernameFollowing_length', 'mres'],
-			['R', '%m.users of %n most recent follower of user %s', 'usersUsernameFollowers', 'username', 1, 'mres'],
+			['R', '%m.users of follower %n of user %s', 'usersUsernameFollowers', 'username', 1, 'mres'],
 			['R', 'follower count of user %s', 'usersUsernameFollowers_length', 'mres'],
 			['-'],*/
 			['R', 'message count of user %s', 'usersUsernameMessagesCount', 'mres'],
@@ -12,10 +12,10 @@ new (function() {
 			['R', '%s of news item %n', 'news', 'title', 1],
 			['R', 'length of news', 'news_length', ''],
 			['-'],
-			['R', '%m.projects of %n shared project of user %s', 'usersUsernameProjects', 'title', 1, 'mres'],//make
+			['R', '%m.projects of shared project %n of user %s', 'usersUsernameProjects', 'title', 1, 'mres'],//make
 			['R', 'project count of user %s', 'usersUsernameProjects_length', 'mres'],//make
 			['R', '%m.projects of project with id %n by user %s', 'usersUsernameProjectsProject', 'title', 10128125, 'mres'],//make
-			/*['R', '%m.projects of %n favorited project by user %s', 'usersUsernameFavorites', 'title', 1, 'mres'],
+			/*['R', '%m.projects of favorite project %n by user %s', 'usersUsernameFavorites', 'title', 1, 'mres'],
 			['R', 'favorite count of user %s', 'usersUsernameFavorites_length', 'mres'],*/
 			['R', 'total project count', 'projectsCountAll', 'mres'],//make
 			['-'],
